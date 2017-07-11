@@ -1,0 +1,47 @@
+body {
+    background: linear-gradient(top, rgb(64, 64, 64), rgb(128, 128, 128));
+    background: -webkit-linear-gradient(top, rgb(32, 32, 32), rgb(128, 128, 128));
+    font-family: Consolas, Arial, Monaco; 
+    color: white;
+    text-align: center;
+}
+h1 {
+    /*display: inline-block;*/
+}
+#btnLogout {
+    background-color: gray;
+    border: 2px solid gray;
+    color: white;
+    border-radius: 40px;
+
+}
+#btnLogout:hover {
+    font-weight:  bold;
+    border-radius: 0px;
+}
+#title {
+    background: rgba(55, 55, 55, 127);
+    border: 2px solid black;
+    min-height: 50px;
+    height: 50%;
+    max-height: 50%;
+}
+#title:hover {
+    border: 3px solid silver;
+}
+#content {
+    background: rgba(55, 55, 55, 127);
+    border: 2px solid black;
+    min-height: 200px;
+    height: 50%;
+    max-height: 50%;
+}
+#content:hover {
+    border: 3px solid silver;
+}
+h2 {
+    text-align: center;
+}
+p {
+    text-align: center;
+}
