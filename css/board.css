@@ -8,16 +8,22 @@ body {
 h1 {
     /*display: inline-block;*/
 }
-#btnLogout {
-    background-color: gray;
+.button {
+    background-color: black;
     border: 2px solid gray;
     color: white;
     border-radius: 40px;
 
 }
-#btnLogout:hover {
+.button:hover {
     font-weight:  bold;
     border-radius: 0px;
+}
+#boardlist {
+    text-align: center;
+    width: 700px;
+    margin: auto;
+    padding: auto;
 }
 #title {
     background: rgba(55, 55, 55, 127);

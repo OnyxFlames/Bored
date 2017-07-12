@@ -1,9 +1,10 @@
 <?php
-    $form = "";
-    $form .= "<form name='frmUsername' id='frmUsername' action='php/createuser.php' method='GET'>";
-    $form .= "You haven't selected a username!<br>";
-    $form .= "Enter a username: <input type='text' name='username' id='username'> ";
-    $form .= "<input type='submit' value='Create username'>";
-    $form .= "</form>";
-    return $form;
+    $userform = "";
+    $userform .= "<form name='frmUsername' id='frmUsername' action='php/createuser.php' method='POST'>";
+    $userform .= "You aren't logged in!<br>";
+    $userform .= "Enter a username: <input type='text' name='username' id='username'><br>";
+    $userform .= "Enter a password: <input type='password' name='password' id='password' placeholder='Note: Not secure'><br><br>";
+    $userform .= "<input type='submit' value='Create user'>";
+    $userform .= "</form>";
+    return $userform;
 ?>

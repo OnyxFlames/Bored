@@ -1,4 +1,19 @@
 <?php
+
+    require "connect.php";
+
+    $titleQ = $mysqli->query("select * from POST") or die($mysqli->error);
+
+    $titles = array();
+    $contents = array();
+    $poster = array();
+    while($t = $titleQ->fetch_array())
+    {
+        array_push($titles, $t["title"]);
+        array_push($contents, $t["content"]);
+        array_push($poster, $t["poster"]);
+    }
+
     /*
         Until we get into actual posting for boards, we will use test data.
     */
@@ -12,25 +27,10 @@
     $username = $_COOKIE["username"];
     $ret .= "<table id='tblPost'><tr><td>";
 
-    $titles = array(
-            "Woo! First board.",
-            "Second isn't bad.",
-            "This site sucks.");
-    $content = array(
-            "I'm so excited to post my first board blah blah blah.",
-            "I don't mind posting the second board. Kinda happy I'm not first.",
-            "I'm not first this site blows."
-        );
-    $poster = array(
-            "Jake",
-            "Lil' ole timmeh",
-            "Kyle"
-        );
-        
         for ($i = 0; $i < count($titles); $i++)
         {
             $ret .= "<h2 id=\"title\">" . $titles[$i] . "</h2>";
-            $ret .= "<p id=\"content\">" . $content[$i];
+            $ret .= "<p id=\"content\">" . $contents[$i];
             
             if ($poster[$i] == $username)
             {

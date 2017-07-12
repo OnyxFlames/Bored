@@ -5,9 +5,22 @@
     }
     else
     {
-        $value = $_GET["username"];
-        setcookie("username", $value, time() + 60 * 60 * 24, "/");
-        echo "Username: $value issued for 24 hours.";
+
+        require "connect.php";
+
+
+        $user = $_POST["username"];
+        $mysqli->query("select username from user where user = '$user'");
+
+        if ($mysqli->num_rows == 1)
+        {
+            die("User already exists!");
+        }
+
+        $user = $_POST["username"];
+        $pass = $_POST["password"];
+        //setcookie("username", $value, time() + 60 * 60 * 24, "/");
+        //echo "Username: $value issued for 24 hours.";
         header("location: ../index.php");
     }
 ?>
